@@ -1,0 +1,143 @@
+.calendar-section {
+
+  padding: 20px;
+  min-width:40%;
+  max-width:90%;
+  min-height: 800px;
+  margin: 0 auto;
+}
+.calendar-section h2, .calendar-section h3, .calendar-details>p{
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 1px 2px 5px var(--dark);
+}
+.calendar-grid {
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-grid button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.calendar-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/photos/mainbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(15px);
+  z-index: -1;
+  transform: scale(1.05);
+}
+
+.calendar-grid button:hover {
+  background-color: var(--dark);
+  color: var(--white)
+}
+
+.calendar-grid button:focus {
+  outline: 2px solid var(--dark);
+  outline-offset: 2px;
+}
+
+
+.calendar-grid > div {
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.days{
+  font-weight: bold; 
+  color: var(--white);
+  text-align: center;
+  text-shadow: 1px 2px 5px var(--dark);
+}
+.calendar-day {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--dark);
+  font-weight: 400;
+  transition: 0.2s ease;
+}
+
+.calendar-day.selected {
+  background-color: var(--secondary);
+  color: var(--dark);
+}
+
+.calendar-day.has-concert {
+  background-color: var(--accent);
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.calendar-artist{
+  width: 5em; 
+  height:5em; 
+  object-fit: cover; 
+  border-radius: 6px;
+}
+.calendar-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.calendar-item {
+  border: 1px solid var(--white);
+  min-width: 30em;
+  outline: 2px solid var(--dark);
+  outline-offset: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  gap: 10px;
+}
+@media (max-width: 900px) {
+  .calendar-section {
+    padding: 1rem 0.2rem !important;
+  }
+  .calendar-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .calendar-section {
+    padding: 0.5rem 0.1rem !important;
+  }
+  .calendar-grid {
+    gap: 0.15rem;
+  }
+  .calendar-grid button,
+  .calendar-grid > div {
+    font-size: 0.95em;
+    padding: 0.3em 0.1em;
+    min-width: 28px;
+    min-height: 28px;
+  }
+}
