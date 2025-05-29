@@ -213,7 +213,7 @@ function App() {
       {showInfo ? (
       <section className={`info-section fade${showInfo ? ' fade-in' : ''}`}>
         <h2>Informacje o wydarzeniu</h2>
-        <p>Festiwal Uczelniany to coroczne święto muzyki, kultury i integracji studenckiej organizowane na terenie Politechniki Łódzkiej.</p>
+        <p>JUWENALIA to coroczne święto muzyki, kultury i integracji studenckiej organizowane na terenie Politechniki Łódzkiej.</p>
 
         <div className="info-content">
           <div className="info-box">
@@ -426,7 +426,7 @@ function App() {
       )}
 
     <footer className="footer">
-      <p>&copy; 2025 Festiwal Uczelniany. Wszelkie prawa zastrzeżone.</p>
+      <p>&copy; 2025 JUWENALIA Wszelkie prawa zastrzeżone.</p>
       <p>Organizator: Samorząd Studencki PŁ</p>
       <p>Email: kontakt@uczelnia.pl | Telefon: +48 123 456 789</p>
     </footer>
