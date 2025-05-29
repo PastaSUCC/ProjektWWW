@@ -326,7 +326,7 @@ function App() {
       <section className="sponsors-section">
           <h2>Nasi Sponsorzy</h2>
           <p>Wydarzenie wspierają wspaniałe marki, które umożliwiają jego organizację.</p>
-          <div className="sponsor-logos">
+          {/* <div className="sponsor-logos">
             <div className="sponsor">
               <img src="/photos/sponsor1.jpg" alt="Sponsor 1" />
               <p>Perła</p>
@@ -339,7 +339,11 @@ function App() {
               <img src="/photos/sponsor3.jpg" alt="Sponsor 3" />
               <p>Kuflowe mocne 7%</p>
             </div>
-          </div>
+          </div> */}
+            <div className="sponsor">
+              <img src="/photos/artysta1.jpg" alt="Sponsor 3" />
+              <p>Przykładowy sponsor</p>
+            </div>
         </section>
       ) : (
         <>
