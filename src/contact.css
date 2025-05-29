@@ -28,8 +28,8 @@
   transform: scale(1.05);
 }
 
-.contact-section h2, .contact-section h1  {
-  font-size: 2rem;
+.contact-section > h2, .contact-section h1  {
+  font-size: 3rem;
   margin-bottom: 20px;
   color: var(--white);
   text-align: center;
@@ -86,22 +86,38 @@
 }
 
 .contact-section h4 {
-  font-size: 18px;
-  color: var(--dark);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 1px 2px 5px var(--dark);
 }
 
-.contact-section p strong {
-  color: var(--dark);
+.contact-section > .contact-info strong {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 1px 2px 5px var(--dark);
+}
+
+.contact-section > .contact-info p {
+  font-size: 1.3rem;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 1px 2px 5px var(--dark);
 }
 
 .contact-info{
   padding: 10px;
   margin-top: 2rem;
   width: 25%;
-  background-color: var(--primary);
-  border-radius: 20px;
-  outline: 5px solid var(--dark);
+  /* background-color: var(--primary); */
+  /* border-radius: 20px; */
+  /* outline: 5px solid var(--dark); */
+
 }
+
 
 @media (max-width: 900px) {
   .contact-section {

@@ -150,7 +150,6 @@ function App() {
       <nav className={`navbar${navOpen ? ' open' : ''}`}>
         <button
           className="navbar-toggle"
-          aria-label="Pokaż menu"
           onClick={() => setNavOpen(v => !v)}
         >
           <span className="navbar-hamburger"></span>
@@ -239,7 +238,7 @@ function App() {
           <form className="contact-form" onSubmit={(e) => { e.preventDefault(); alert("Wiadomość wysłana!"); }}>
             <input type="text" placeholder="Imię i nazwisko" required />
             <input type="email" placeholder="Email" required />
-            <textarea rows="5" placeholder="Twoja wiadomość..." required></textarea>
+            <textarea rows="5" placeholder="Twoja wiadomość..." required ></textarea>
             <button type="submit">Wyślij</button>
           </form>
           <div class="contact-info">
@@ -352,6 +351,7 @@ function App() {
                   <p>Nie przegap najważniejszych wydarzeń naszej uczelni!</p>
                 </div>
                 <form className={`ticket-form ${showForm ? 'visible' : 'hidden'}`}>
+                                  <h1>KUB BILET</h1>
                   <div className="form-group">
                     <input type="text" placeholder="imie" required />
                     <input type="text" placeholder="nazwisko" required />

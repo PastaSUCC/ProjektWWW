@@ -112,7 +112,7 @@ body {
 
 .navbar a {
   transition: 0.5s;
-  color: var(--primary);
+  color: var(--white);
   text-decoration: none;
 }
 
