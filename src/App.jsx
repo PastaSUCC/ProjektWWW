@@ -341,7 +341,7 @@ function App() {
             </div>
           </div> */}
             <div className="sponsor">
-              <img src="/photos/artysta1.jpg" alt="Sponsor 3" />
+              <img src="/photos/sponsor2.jpg" alt="Sponsor 3" />
               <p>Przykładowy sponsor</p>
             </div>
         </section>
