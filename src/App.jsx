@@ -223,7 +223,7 @@ function App() {
           </div>
           <div className="info-box">
             <h3>📍 Lokalizacja</h3>
-            <p>Wydarzenia będą odbywać się na kilku scenach: Indeks, Kampus A PŁ, oraz boisko przy akademikach.</p>
+            <p>Wydarzenia będą odbywać się na kilku scenach: Indeks, Kampusy A i B PŁ, oraz boisko przy akademikach.</p>
           </div>
           <div className="info-box">
             <h3>🕒 Harmonogram</h3>
