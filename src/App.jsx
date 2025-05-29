@@ -22,7 +22,7 @@ const galleryData = [
   },
   {
     image: '/photos/artysta3.jpg',
-    artist: 'SNOOP DOG',
+    artist: 'SNOOP DOGG',
     date: '31.05.2025',
     location: 'Łódź, Akademiki - boisko',
   },
@@ -32,17 +32,35 @@ const galleryData = [
     date: '28.05.2025',
     location: 'Łódź, Indeks',
   },
-  {
-    image: '/photos/krawczyk.jpg',
-    artist: 'KRZYSZTOF KRAWCZYK',
-    date: '28.05.2025',
+      {
+    image: '/photos/playboi_carti.jpg',
+    artist: 'PLAYBOI CARTI',
+    date: '29.05.2025',
+    location: 'Łódź, Kampus B PŁ',
+  },
+  // {
+  //   image: '/photos/krawczyk.jpg',
+  //   artist: 'KRZYSZTOF KRAWCZYK',
+  //   date: '28.05.2025',
+  //   location: 'Łódź, Indeks',
+  // },
+  // {
+  //   image: '/photos/hazel.jpg',
+  //   artist: 'DJ HAZEL',
+  //   date: '28.05.2025',
+  //   location: 'Łódź, Indeks',
+  // },
+      {
+    image: '/photos/syn_mlynarza.jpg',
+    artist: 'SYN MŁYNARZA',
+    date: '31.05.2025',
     location: 'Łódź, Indeks',
   },
-  {
-    image: '/photos/hazel.jpg',
-    artist: 'DJ HAZEL',
-    date: '28.05.2025',
-    location: 'Łódź, Indeks',
+        {
+    image: '/photos/bibinos.jpg',
+    artist: 'BBNO$',
+    date: '30.05.2025',
+    location: 'Łódź, Kambus B PŁ',
   },
 ];
 
