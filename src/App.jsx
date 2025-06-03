@@ -122,10 +122,12 @@ function App() {
     return days;
   };
 
-  const today = new Date();
+
+  const today = new Date(2025,4,1);
   const year = today.getFullYear();
   const month = today.getMonth();
   const days = getDaysInMonth(year, month);
+
 
   const onSelectDate = (date) => {
     setSelectedDate(date);
