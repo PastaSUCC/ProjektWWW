@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
-import { ArrowLeft, ArrowRight, ShoppingCart, User, MapPin, Search } from "lucide-react";
+import { ArrowLeft, ArrowRight, ShoppingCart, User, MapPin, Search, Inspect, LogIn} from "lucide-react";
+import { FaFacebook, FaInstagram, FaDiscord } from "react-icons/fa";
 import './index.css'
 import './calendar.css'
 import './info.css'
@@ -81,6 +82,10 @@ function App() {
 
   const [navOpen, setNavOpen] = useState(false);
   
+
+  // Pioter dodaj prosze zeby w formularzo dalo sie wybrac rodzaj biletu. Wystarczy studencli i normaln y a cenu sobie wymysl
+
+  // Zrobione :)
   const [ticketType, setTicketType] = useState("");
   const getTicketPrice = (type) => {
     if (type === "normalny") return 50;
@@ -103,7 +108,12 @@ function App() {
     setCurrentIndex(prev => (prev == galleryData.length - 1 ? 0 : prev + 1));
   };
 
-  // --- Kalendarz ---
+  // Piotrek zrbo prosze aby wyswietlal sie kalendarz z koncertami. Ja sie zajme zeby glowna wygladala dobrze
+  // Ogarnalem u mnie dziala
+
+  // Piotrek, to nie dziala, bo kalendarz pobiera aktualny miesiac, a koncerty ustawiles na maj XDDD
+  // Poprpaw to blagam
+
   const concertsByDate = galleryData.reduce((acc, concert) => {
     const [day, month, year] = concert.date.split('.');
     const dateKey = new Date(year, month - 1, day).toDateString();
@@ -122,7 +132,7 @@ function App() {
     return days;
   };
 
-
+  // Poprawilem tu byla fuszerka
   const today = new Date(2025,4,1);
   const year = today.getFullYear();
   const month = today.getMonth();
@@ -137,14 +147,20 @@ function App() {
     <div>
 
       <header className="header">
-        <div className="logo">
+        <div className="logo" style={{ cursor: "pointer" }} onClick={() => {
+          setShowCalendar(false);
+          setShowContact(false);
+          setShowInfo(false);
+          setShowSponsors(false);
+          setSelectedDate(null);
+        }}>
           <img src="/photos/LOGO.jpg" alt="Logo" />
         </div>
         <div className="icons">
-          <button><Search size={20} /></button>
-          <button><User size={20} /></button>
-          <button><ShoppingCart size={20} /></button>
-          <button><MapPin size={20} /></button>
+          <button><FaFacebook size={30} /></button>
+          <button><FaInstagram size={30} /></button>
+          <button><FaDiscord size={30} /></button>
+          <button><User size={30} /></button>
         </div>
       </header>
 
@@ -213,7 +229,7 @@ function App() {
       </nav>
 
       {showInfo ? (
-      <section className={`info-section fade${showInfo ? ' fade-in' : ''}`}>
+      <section className={`info-section fade${showInfo ? ' fade-in' : ''} filter`}>
         <h2>Informacje o wydarzeniu</h2>
         <p>JUWENALIA to coroczne święto muzyki, kultury i integracji studenckiej organizowane na terenie Politechniki Łódzkiej.</p>
 
@@ -233,7 +249,7 @@ function App() {
         </div>
       </section>
     ) : showContact ? (
-        <section className={`contact-section fade${showContact ? ' fade-in' : ''}`}>
+        <section className={`contact-section filter fade${showContact ? ' fade-in' : ''}`}>
           <h2>Kontakt</h2>
           <p>Masz pytanie? Skontaktuj się z nami za pomocą formularza lub bezpośrednio:</p>
 
@@ -254,7 +270,7 @@ function App() {
       ) : showCalendar ? (
         <>
         
-        <section className="calendar-section" style={{ padding: '20px' }}>
+        <section className="calendar-section filter" style={{ padding: '20px' }}>
           <h2>Kalendarz - {today.toLocaleString('pl-PL', { month: 'long' })} {year}</h2>
           <div className="calendar-grid">
             {['Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'So', 'Nd'].map((d) => (
@@ -325,31 +341,32 @@ function App() {
         </>
         
       ) : showSponsors ? (
-      <section className="sponsors-section">
+      <section className="sponsors-section filter">
           <h2>Nasi Sponsorzy</h2>
           <p>Wydarzenie wspierają wspaniałe marki, które umożliwiają jego organizację.</p>
-          {/* <div className="sponsor-logos">
+          <div className="sponsor-logos">
             <div className="sponsor">
               <img src="/photos/sponsor1.jpg" alt="Sponsor 1" />
-              <p>Perła</p>
+              <p>Przykład</p>
             </div>
             <div className="sponsor">
               <img src="/photos/sponsor2.jpg" alt="Sponsor 2" />
-              <p>Techno żul</p>
+              <p>POPIS</p>
             </div>
             <div className="sponsor">
               <img src="/photos/sponsor3.jpg" alt="Sponsor 3" />
-              <p>Kuflowe mocne 7%</p>
+              <p>CHIPSY</p>
             </div>
-          </div> */}
-            <div className="sponsor">
+          </div>
+            {/* <div className="sponsor">
               <img src="/photos/sponsor2.jpg" alt="Sponsor 3" />
               <p>Przykładowy sponsor</p>
-            </div>
+            </div> */}
         </section>
       ) : (
         <>
-          <section className="hero">
+          <section className="hero filter">
+            <h1 className="hero-title">JUWENALIA PŁ 2025</h1>
             <div className={`hero-box${showForm ? ' expanded' : ' collapsed'}`}>
               <div className="hero-form">
                 <div className={`hero-content ${!showForm ? 'visible' : 'hidden'}`}>
@@ -429,7 +446,7 @@ function App() {
 
     <footer className="footer">
       <p>&copy; 2025 JUWENALIA Wszelkie prawa zastrzeżone.</p>
-      <p>Organizator: Samorząd Studencki PŁ</p>
+      <p>Organizatorzy: Samorząd Studencki PŁ, Jakub Pastusiak i Piotr Garbarczyk</p>
       <p>Email: kontakt@uczelnia.pl | Telefon: +48 123 456 789</p>
     </footer>
   

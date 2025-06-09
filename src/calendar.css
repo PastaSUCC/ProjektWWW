@@ -12,6 +12,83 @@
   text-align: center;
   text-shadow: 1px 2px 5px var(--dark);
 }
+.calendar-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 2px 4px 16px var(--accent), 0 2px 8px var(--dark);
+  letter-spacing: 1px;
+}
+
+.calendar-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 0 2px 8px var(--dark);
+}
+
+.calendar-details > p {
+  font-size: 1.1rem;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+  .calendar-section {
+    padding: 1rem 0.2rem !important;
+    max-width: 70%;
+  }
+  .calendar-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.3rem;
+  }
+  .calendar-section h2 {
+    font-size: 1.5rem;
+  }
+  .calendar-section h3 {
+    font-size: 1.05rem;
+  }
+  .calendar-details > p {
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .calendar-section {
+    padding: 0.5rem 0.1rem !important;
+    max-width: 90%;
+  }
+  .calendar-grid {
+    gap: 0.15rem;
+  }
+  .calendar-grid button,
+  .calendar-grid > div {
+    font-size: 0.95em;
+    padding: 0.3em 0.1em;
+    min-width: 28px;
+    min-height: 28px;
+  }
+  .calendar-item {
+    min-width: 10em;
+    max-width: 20em;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .calendar-section h2 {
+    font-size: 1.1rem;
+  }
+  .calendar-section h3 {
+    font-size: 0.95rem;
+  }
+  .calendar-details > p {
+    font-size: 0.9rem;
+  }
+}
+
 .calendar-grid {
 
   display: grid;
@@ -38,7 +115,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
-  filter: blur(15px);
   z-index: -1;
   transform: scale(1.05);
 }
@@ -114,39 +190,5 @@
   align-items: center;
   background-color: var(--white);
   gap: 10px;
-}
-@media (max-width: 900px) {
-  .calendar-section {
-    padding: 1rem 0.2rem !important;
-    max-width: 70%;
-  }
-  .calendar-grid {
-    grid-template-columns: repeat(7, 1fr);
-    gap: 0.3rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .calendar-section {
-    padding: 0.5rem 0.1rem !important;
-    max-width: 90%;
-  }
-  .calendar-grid {
-    gap: 0.15rem;
-  }
-  .calendar-grid button,
-  .calendar-grid > div {
-    font-size: 0.95em;
-    padding: 0.3em 0.1em;
-    min-width: 28px;
-    min-height: 28px;
-  }
-  .calendar-item {
-    min-width: 10em;
-    max-width: 20em;
-    padding: 5px;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
