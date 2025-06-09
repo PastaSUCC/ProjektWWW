@@ -72,9 +72,9 @@
   cursor: pointer;
   user-select: none;
 }
-/* ZMIENNE NA KOLORKI */
+
 :root {
-  --primary: #cccccc;
+  --primary: #dbdbdb;
   --secondary: #c47676;
   --accent: #a21c1c;
   --dark: #181818;
@@ -111,6 +111,8 @@ body {
 }
 
 .navbar a {
+  width: 100%;
+  padding: 20px;
   transition: 0.5s;
   color: var(--white);
   text-decoration: none;

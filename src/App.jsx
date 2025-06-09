@@ -145,10 +145,10 @@ function App() {
           <img src="/photos/LOGO.jpg" alt="Logo" />
         </div>
         <div className="icons">
-          <button><FaFacebook size={30} /></button>
-          <button><FaInstagram size={30} /></button>
-          <button><FaDiscord size={30} /></button>
-          <button><User size={30} /></button>
+          <a href=""><button><FaFacebook size={30} /></button></a>
+          <a href=""><button><FaInstagram size={30} /></button></a>
+          <a href=""><button><FaDiscord size={30} /></button></a>
+          <a href=""><button><User size={30} /></button></a>
         </div>
       </header>
 
@@ -266,7 +266,7 @@ function App() {
                 <div key={d} className="days">{d}</div>
               ))}
 
-              {Array(days[0].getDay() === 0 ? 6 : days[0].getDay() - 1).fill(null).map((_, i) => (
+              {Array(days[0].getDay()==0 ? 6 : days[0].getDay()-1).fill(null).map((_, i) => (
                 <div key={`empty-${i}`} />
               ))}
 
