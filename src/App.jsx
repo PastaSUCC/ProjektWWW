@@ -97,10 +97,9 @@ function App() {
   };
 
   // Piotrek zrbo prosze aby wyswietlal sie kalendarz z koncertami. Ja sie zajme zeby glowna wygladala dobrze
-  // Ogarnalem u mnie dziala
+  // Ogarnalem u mnie dziala :)))))))))))))))))))))))))))))))))))))))))))))))))
 
-  // Piotrek, to nie dziala, bo kalendarz pobiera aktualny miesiac, a koncerty ustawiles na maj XDDD
-  // Poprpaw to blagam
+  // Piotrek, to nie dziala, bo kalendarz pobiera aktualny miesiac, a koncerty ustawiles na maj XDDD Poprpaw to blagam
 
   const concertsByDate = galleryData.reduce((acc, concert) => {
     const [day, month, year] = concert.date.split('.');
