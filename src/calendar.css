@@ -13,8 +13,7 @@
   overflow: hidden;
 }
 .calendar-container {
-  width: 100%;
-  max-width: 900px;
+  width: 80%;
   margin: 0 auto;
   padding: 20px;
   display: flex;
@@ -70,7 +69,7 @@
 
 
 .calendar-grid {
-  width: 50%;
+  width: 100%;
   min-height: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
