@@ -111,7 +111,7 @@ body {
 }
 
 .navbar a {
-  width: 100%;
+  width: 90%;
   padding: 20px;
   transition: 0.5s;
   color: var(--white);
@@ -538,7 +538,7 @@ footer{
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .hero-title {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -577,7 +577,7 @@ footer{
   }
   .navbar a {
     display: none;
-    width: 100%;
+    width: 90%;
     text-align: center;
     font-size: 1em;
     margin: 0.1em 0;
