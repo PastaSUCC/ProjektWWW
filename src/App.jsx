@@ -272,31 +272,33 @@ function App() {
         
         <section className="calendar-section filter" style={{ padding: '20px' }}>
           <h2>Kalendarz - {today.toLocaleString('pl-PL', { month: 'long' })} {year}</h2>
-          <div className="calendar-grid">
-            {['Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'So', 'Nd'].map((d) => (
-              <div key={d} className="days">{d}</div>
-            ))}
+          <div className="calendar-container">
+            <div className="calendar-grid">
+              {['Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'So', 'Nd'].map((d) => (
+                <div key={d} className="days">{d}</div>
+              ))}
 
-            {Array(days[0].getDay() === 0 ? 6 : days[0].getDay() - 1).fill(null).map((_, i) => (
-              <div key={`empty-${i}`} />
-            ))}
+              {Array(days[0].getDay() === 0 ? 6 : days[0].getDay() - 1).fill(null).map((_, i) => (
+                <div key={`empty-${i}`} />
+              ))}
 
-            {days.map((day) => {
-              const dateKey = day.toDateString();
-              const hasConcert = !!concertsByDate[dateKey];
-              const isSelected = selectedDate?.toDateString() === dateKey;
+              {days.map((day) => {
+                const dateKey = day.toDateString();
+                const hasConcert = !!concertsByDate[dateKey];
+                const isSelected = selectedDate?.toDateString() === dateKey;
 
-              return (
-                <button
-                  key={dateKey}
-                  className={`calendar-day ${isSelected ? 'selected' : ''} ${hasConcert ? 'has-concert' : ''}`}
-                  onClick={() => onSelectDate(day)}
-                  title={hasConcert ? `Koncert(y) tego dnia` : ''}
-                >
-                  {day.getDate()}
-                </button>
-              );
-            })}
+                return (
+                  <button
+                    key={dateKey}
+                    className={`calendar-day ${isSelected ? 'selected' : ''} ${hasConcert ? 'has-concert' : ''}`}
+                    onClick={() => onSelectDate(day)}
+                    title={hasConcert ? `Koncert(y) tego dnia` : ''}
+                  >
+                    {day.getDate()}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {selectedDate && (
