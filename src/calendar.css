@@ -54,38 +54,11 @@
   .calendar-details > p {
     font-size: 0.98rem;
   }
-}
-
-@media (max-width: 600px) {
-  .calendar-section {
-    padding: 0.5rem 0.1rem !important;
-    max-width: 90%;
-  }
-  .calendar-grid {
-    gap: 0.15rem;
-  }
-  .calendar-grid button,
-  .calendar-grid > div {
-    font-size: 0.95em;
-    padding: 0.3em 0.1em;
-    min-width: 28px;
-    min-height: 28px;
-  }
-  .calendar-item {
-    min-width: 10em;
-    max-width: 20em;
-    padding: 5px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .calendar-section h2 {
-    font-size: 1.1rem;
-  }
-  .calendar-section h3 {
-    font-size: 0.95rem;
-  }
-  .calendar-details > p {
-    font-size: 0.9rem;
+    .calendar-item {
+    min-width: 14em;
+    max-width: 100%;
+    padding: 8px;
+    gap: 8px;
   }
 }
 
@@ -179,7 +152,8 @@
 }
 .calendar-item {
   border: 1px solid var(--white);
-  min-width: 30em;
+  min-width: 22em;
+  max-width: 32em;
   outline: 2px solid var(--dark);
   outline-offset: 5px;
   border-radius: 10px;
@@ -190,5 +164,49 @@
   align-items: center;
   background-color: var(--white);
   gap: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+@media (max-width: 600px) {
+  .calendar-section {
+    padding: 0.5rem 0.1rem !important;
+    max-width: 90%;
+  }
+  .calendar-grid {
+    gap: 0.15rem;
+  }
+  .calendar-grid button,
+  .calendar-grid > div {
+    font-size: 0.95em;
+    padding: 0.3em 0.1em;
+    min-width: 28px;
+    min-height: 28px;
+  }
+  .calendar-item {
+    flex-direction: column;
+    align-items: center;
+    min-width: unset;
+    max-width: 100vw;
+    width: 100%;
+    padding: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 6px;
+  }
+    .calendar-artist {
+    width: 3.5em;
+    height: 3.5em;
+  }
+  .calendar-section h2 {
+    font-size: 1.1rem;
+  }
+  .calendar-section h3 {
+    font-size: 0.95rem;
+  }
+  .calendar-details > p {
+    font-size: 0.9rem;
+  }
 }
 
