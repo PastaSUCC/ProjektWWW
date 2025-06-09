@@ -1,7 +1,9 @@
 .calendar-section {
   position: relative; 
   padding: 20px;
-  max-width: 100%;
+  width:100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -28,7 +30,7 @@
   background-color: var(--accent);
   background-image: url("/photos/mainbackground.jpg");
   background-repeat: none;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   z-index: -1;
   pointer-events: none;
@@ -168,7 +170,7 @@
     max-width: 70%;
   }
   .calendar-section::before {
-    background-size: 140% auto;
+    /* background-size: 140% auto; */
   }
   .calendar-grid {
     grid-template-columns: repeat(7, 1fr);
@@ -196,7 +198,7 @@
     max-width: 90%;
   }
   .calendar-section::before {
-    background-size: 200% auto;
+    /* background-size: 200% auto; */
   }
   .calendar-grid {
     gap: 0.15rem;
